@@ -1,0 +1,177 @@
+/* Default DevCorner Style Setting */
+
+:root{
+  --dc-: #28a745;
+  --gr-: #515151;
+  --shadow-: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  --ts-: 2px 5px 2px rgba(33,33,33,0.25);
+}
+
+.fa-code{
+  color: var(--dc-);
+}
+
+.center{
+  top: 50%;
+  position: sticky;
+}
+
+.brand{
+  margin: 0;
+  padding: 0.5em;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--gr-);
+  font-family: Roboto;
+  z-index: 1;
+  font-size: 3em;
+  text-shadow: var(--ts-);
+}
+
+.slogan{
+  margin: 0;
+  padding: 0.5em;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--gr-);
+  font-family: Roboto;
+  font-size: 1.2em;
+  text-shadow: var(--ts-);
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background: url(../img/img_05.jpeg) no-repeat 50% 50%;
+  background-size: cover;
+  display: table;
+  text-align: center;
+  font-family: Roboto;
+}
+
+button{
+  width: 300px;
+  height: 50px;
+  border: 2px solid var(--dc-);
+  border-radius: 5px;
+  font-weight: 400;
+  color: var(--dc-);
+  background: rgba(255,255,255,0.5);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button:hover{
+  background: rgba(255,255,255,0.7);
+}
+
+/*
+
+  Another example for input:
+
+  input::-moz-focus-inner{
+    border:0;
+  }
+
+//----
+
+  For different Browsers: -rendering engines-
+
+  Safari/Chrome: -webkit-
+  FireFox-Mozzila: -moz-
+  Opera: -o-
+  Microsoft Edge/InternetExplorer: -ms-
+
+//----
+
+  To make CSS visible only for Opera
+
+  noindex:-o-prefocus, .class {
+    color:#fff;
+  }
+
+//----
+
+  :after is a pseudo-class
+    and
+  ::after is a pseudo-element
+
+*/
+
+/*
+  Bootstrap may affect this/these - It may require to put the "!important" notation at the end
+  FireFox Magic to remove the dotted border around the button */
+button::-moz-focus-inner{
+  border: 0;
+}
+
+
+#snackbar{
+  min-width: 300px;
+  margin-left: -165px;
+  visibility: hidden;
+  bottom: 30px;
+  left: 50%;
+  z-index: 1;
+  text-align: center;
+  font-size: 25px;
+  position: absolute;
+  padding: 16px;
+  color: var(--dc-);
+  background: #fff;
+  border-radius: 1em;
+}
+
+#snackbar.show{
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+  from{
+    bottom: 0;
+    opacity: 0;
+  }
+  to{
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from{
+    bottom: 30px;
+    opacity: 1;
+  }
+  to{
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* End */
